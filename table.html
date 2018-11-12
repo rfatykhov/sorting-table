@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Test Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="table.css" />
+</head>
+<body>
+  <div>
+        <label for="search">Search: </label>
+        <input id='search' name='search' type='text'><button onclick='search()'>search</button>
+  </div>
+        <table id="table">
+          <thead>
+              <tr>
+                  <th onclick="sort(0)">Name<i><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7dQ7DsMgEEVRFpYFZP+LSJk2ZWwkboNk+ccMM9a70qvhFFCUUkp1vdtSVwG/trQYEP+2lJgekRKzhWApMHsIFhpzFMFCYs4iWCjMVQQLgbmLYFMxoxBsCmY0grlirBDMBWONYKYYLwQzwXgj2FDMa91n3XfS6tn1Dkop4x712B/x/ZI3xgRBXhhTBFljXBBkhXFF0GjMFASNwkxF0F1MCARdxYRC0FlMSAQdxYRG0B4mBYK2MKkQ1GNSIghMagRVQHqEUkqNrJQF2bYqr0r75QUAAAAASUVORK5CYII="></i></th>
+                  <th onclick="sort(1)">Position<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7dQ7DsMgEEVRFpYFZP+LSJk2ZWwkboNk+ccMM9a70qvhFFCUUkp1vdtSVwG/trQYEP+2lJgekRKzhWApMHsIFhpzFMFCYs4iWCjMVQQLgbmLYFMxoxBsCmY0grlirBDMBWONYKYYLwQzwXgj2FDMa91n3XfS6tn1Dkop4x712B/x/ZI3xgRBXhhTBFljXBBkhXFF0GjMFASNwkxF0F1MCARdxYRC0FlMSAQdxYRG0B4mBYK2MKkQ1GNSIghMagRVQHqEUkqNrJQF2bYqr0r75QUAAAAASUVORK5CYII="></th>
+                  <th onclick="sort(2)">Office<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7dQ7DsMgEEVRFpYFZP+LSJk2ZWwkboNk+ccMM9a70qvhFFCUUkp1vdtSVwG/trQYEP+2lJgekRKzhWApMHsIFhpzFMFCYs4iWCjMVQQLgbmLYFMxoxBsCmY0grlirBDMBWONYKYYLwQzwXgj2FDMa91n3XfS6tn1Dkop4x712B/x/ZI3xgRBXhhTBFljXBBkhXFF0GjMFASNwkxF0F1MCARdxYRC0FlMSAQdxYRG0B4mBYK2MKkQ1GNSIghMagRVQHqEUkqNrJQF2bYqr0r75QUAAAAASUVORK5CYII="></th>
+                  <th onclick="sort(3)">Age<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7dQ7DsMgEEVRFpYFZP+LSJk2ZWwkboNk+ccMM9a70qvhFFCUUkp1vdtSVwG/trQYEP+2lJgekRKzhWApMHsIFhpzFMFCYs4iWCjMVQQLgbmLYFMxoxBsCmY0grlirBDMBWONYKYYLwQzwXgj2FDMa91n3XfS6tn1Dkop4x712B/x/ZI3xgRBXhhTBFljXBBkhXFF0GjMFASNwkxF0F1MCARdxYRC0FlMSAQdxYRG0B4mBYK2MKkQ1GNSIghMagRVQHqEUkqNrJQF2bYqr0r75QUAAAAASUVORK5CYII="></th>
+                  <th onclick="sort(4)">Start date<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7dQ7DsMgEEVRFpYFZP+LSJk2ZWwkboNk+ccMM9a70qvhFFCUUkp1vdtSVwG/trQYEP+2lJgekRKzhWApMHsIFhpzFMFCYs4iWCjMVQQLgbmLYFMxoxBsCmY0grlirBDMBWONYKYYLwQzwXgj2FDMa91n3XfS6tn1Dkop4x712B/x/ZI3xgRBXhhTBFljXBBkhXFF0GjMFASNwkxF0F1MCARdxYRC0FlMSAQdxYRG0B4mBYK2MKkQ1GNSIghMagRVQHqEUkqNrJQF2bYqr0r75QUAAAAASUVORK5CYII="></th>
+                  <th onclick="sort(5)">Salary<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVGhD7dQ7DsMgEEVRFpYFZP+LSJk2ZWwkboNk+ccMM9a70qvhFFCUUkp1vdtSVwG/trQYEP+2lJgekRKzhWApMHsIFhpzFMFCYs4iWCjMVQQLgbmLYFMxoxBsCmY0grlirBDMBWONYKYYLwQzwXgj2FDMa91n3XfS6tn1Dkop4x712B/x/ZI3xgRBXhhTBFljXBBkhXFF0GjMFASNwkxF0F1MCARdxYRC0FlMSAQdxYRG0B4mBYK2MKkQ1GNSIghMagRVQHqEUkqNrJQF2bYqr0r75QUAAAAASUVORK5CYII="></th>
+              </tr>
+          </thead>
+        </table>
+    <script src="table.js"></script>
+    </body>
+</html>
+
+
+
+
+
